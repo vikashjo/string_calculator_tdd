@@ -1,7 +1,8 @@
 class StringCalculator
-  def self.add(number)
-    return 0 if number.empty?
-    return number.to_i if number.length == 1
+  def self.add(numbers)
+    return 0 if numbers.empty?
+    return numbers.to_i if numbers.length == 1
+    numbers.split(',').map(&:to_i).sum
   end
 end
   
