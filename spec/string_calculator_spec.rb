@@ -22,5 +22,9 @@ RSpec.describe StringCalculator do
     it 'returns the sum with new lines between numbers' do
       expect(StringCalculator.add('4\n5')).to eq(9) 
     end
+
+    it 'support different delimiters' do
+      expect(StringCalculator.add('//;\n1;2')).to eq(3)
+    end
   end
 end
